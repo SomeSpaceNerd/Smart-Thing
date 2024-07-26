@@ -5,7 +5,7 @@ This is based off of the Debian Chroot for car thing repository
 The OS includes X11 and the GUI runs using LVGL
 
 * working: X11 display using framebuffer driver, touch, buttons
-* not working (but planned): knob, audio, network, external flash drive
+* not working (but planned): knob, audio, network, FTP, external flash drive
 
 
 
@@ -37,8 +37,8 @@ This needs to be done from Debian or Ubuntu Linux x86_64, with the `multistrap` 
     2.  if you ever end up in a situation where the chroot was not cleaned up properly, just run `/scripts/cleanup-chroot.sh` manually
 
 
-The image file is sized at 1.75GB, leaving about 200MB spare on the data partition.
-The current list of packages only occupy about 755MB of that, so there is plenty room for more.
+The image file is sized at 1.75GB, and builds to 825mb, leaving ∼1GB spare on the data partition.
+Currently you can load apps from apt packages or the app directory, but eventually you will be able to use a powered hub + flash drive or FTP to store/load apps
 
 
 ## Device Scripts
