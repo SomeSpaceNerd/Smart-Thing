@@ -48,10 +48,10 @@ multistrap -a $ARCH -d "$LOCAL_ROOT" -f multistrap.conf
 
 # add extra files
 cp xorg.conf "${LOCAL_ROOT}/etc/X11/"
-mkdir -p "${LOCAL_ROOT}/etc/GUI/deploy/"
-cp -R GUI/deploy/ "${LOCAL_ROOT}/etc/GUI/deploy/"
-mkdir -p "${LOCAL_ROOT}/etc/GUI/mpy/"
-cp -R GUI/mpy/ "${LOCAL_ROOT}/etc/GUI/mpy/"
+mkdir -p "${LOCAL_ROOT}/var/GUI/deploy/"
+cp -R GUI/deploy/ "${LOCAL_ROOT}/var/GUI/deploy/"
+mkdir -p "${LOCAL_ROOT}/var/GUI/mpy/"
+cp -R GUI/mpy/ "${LOCAL_ROOT}/var/GUI/mpy/"
 
 LOCAL_SIZE=$(du -sh "$LOCAL_ROOT"|awk '{print $1}')
 
