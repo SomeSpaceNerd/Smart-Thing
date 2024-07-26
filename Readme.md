@@ -1,17 +1,11 @@
-# Superbird (Spotify Car Thing) Debian Chroot
+# Spotify Car Thing smartphone-like OS
 
-Create a debian chroot as an image file on data partition.
+This is based off of the Debian Chroot for car thing repository
 
-The chroot includes X11 and chromium.
+The OS includes X11 and the GUI runs using LVGL
 
-## Progress
-
-This project is just a starting point, and is not particularly useful as-is
-
-* working: X11 display using framebuffer driver
-* not working: touch, buttons, knob, audio, network, basically anything else
-
-![Chromium on Superbird](chromium-debian.jpeg)
+* working: X11 display using framebuffer driver, touch, buttons
+* not working (but planned): knob, audio, network, external flash drive
 
 
 
@@ -36,8 +30,7 @@ This needs to be done from Debian or Ubuntu Linux x86_64, with the `multistrap` 
    1. if you want to disable it persistently: `mv /etc/init.d/S95supervisord /etc/init.d/K95supervisord`
 8. You can activate the chroot (on device) using `/scripts/activate-chroot.sh`
    1. will also remount `/` as read/write
-9.  Once chroot is activated, try launching chromium: `xinit /usr/bin/chromium --no-sandbox`
-    1.  you need `--no-sandbox` because running as root
+9.  Once chroot is activated, try launching the UI: [WIP]
 10. Profit?
 11. To deactivate the chroot, just `exit`
     1.  will automatically call `/scripts/cleanup-chroot.sh` to unmount everything

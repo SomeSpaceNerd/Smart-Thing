@@ -25,6 +25,8 @@ echo "Updating scripts on device"
 adb shell "mkdir -p /scripts"
 adb push device-scripts/cleanup-chroot.sh /scripts/
 adb push device-scripts/activate-chroot.sh /scripts/
+adb push GUI/deploy/. /scripts/GUI/
+adb push GUI/mpy/. /scripts/mpy/
 
 if [ "$1" == "-s" ]; then
     # only updating scripts
