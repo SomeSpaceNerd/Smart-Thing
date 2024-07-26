@@ -2,7 +2,7 @@
 
 This is based off of the Debian Chroot for car thing repository
 
-The OS includes X11 and the GUI runs using LVGL
+The OS includes X11 as a graphics/window manager, the GUI runs using [LVGL](https://github.com/lvgl) and is made in [Squareline Studio](https://squareline.io/)
 
 * working: X11 display using framebuffer driver, touch, buttons
 * not working (but planned): knob, audio, network, FTP, external flash drive
